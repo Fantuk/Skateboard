@@ -16,10 +16,12 @@ body
 {
   margin-inline: auto;
   display: grid;
+  grid-template-columns: 1fr 5fr;
 }
 
 .sidebar
 {
+  grid-column-start: 1;
   width: 148px;
   height: 100vh;
   margin: 1.3em;
@@ -157,10 +159,51 @@ body
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
   }
 
-  .slider_text
+  .slider__text
   {
     white-space: nowrap;
     color: #808191;
+  }
+
+  .header
+  {
+    display: flex;
+    margin: 1.3em;
+    justify-content: center;
+  }
+
+  form {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+  }
+  input, button {
+    border: none;
+    outline: none;
+    border-radius: 3px;
+  }
+  input {
+    width: 100%;
+    height: 42px;
+    background: #F9F0DA;
+    padding-left: 15px;
+  }
+  button {
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #F15B42;
+    cursor: pointer;
+  }
+  button:before {
+    content: "\f105";
+    font-family: FontAwesome;
+    color: #F9F0DA;
+    font-size: 20px;
+    font-weight: bold;
   }
