@@ -21,11 +21,11 @@
 
             <div class="sidebar__list">
                 <ul class="sidebar-list">
-                    <li><div class="list_element el_orange"><img class="list_img" src="./images/house.svg" alt="netu"><div class="list_text text_white">Discover</div></div></li>
-                    <li><div class="list_element"><img class="list_img" src="./images/arrow.svg" alt="netu"><div class="list_text">Trending</div></div></li>
-                    <li><div class="list_element"><img class="list_img" src="./images/stream.svg" alt="netu"><div class="list_text">Streaming</div></div></li>
-                    <li><div class="list_element"><img class="list_img" src="./images/playlist.svg" alt="netu"><div class="list_text">PlayList</div></div></li>
-                    <li><div class="list_element"><img class="list_img" src="./images/bookmark.svg" alt="netu"><div class="list_text">BookMark</div></div></li>
+                    <li><button class="list_element el_orange"><img class="list_img" src="./images/house.svg" alt="netu"><div class="list_text text_white">Discover</div></button></li>
+                    <li><button class="list_element"><img class="list_img" src="./images/arrow.svg" alt="netu"><div class="list_text">Trending</div></button></li>
+                    <li><button class="list_element"><img class="list_img" src="./images/stream.svg" alt="netu"><div class="list_text">Streaming</div></button></li>
+                    <li><button class="list_element"><img class="list_img" src="./images/playlist.svg" alt="netu"><div class="list_text">PlayList</div></button></li>
+                    <li><button class="list_element"><img class="list_img" src="./images/bookmark.svg" alt="netu"><div class="list_text">BookMark</div></button></li>
                 </ul>
             </div> 
 
@@ -39,10 +39,10 @@
 
             <div class="sidebar__list">
                 <ul class="sidebar-list">
-                    <li><div class="list_element"><img class="list_img" src="./images/house_gray.svg" alt="netu"><div class="list_text">Live Stream</div></div></li>
-                    <li><div class="list_element"><img class="list_img" src="./images/arrow.svg" alt="netu"><div class="list_text">Tutorial</div></div></li>
-                    <li><div class="list_element"><img class="list_img" src="./images/stream.svg" alt="netu"><div class="list_text">Competition</div></div></li>
-                    <li><div class="list_element"><img class="list_img" src="./images/playlist.svg" alt="netu"><div class="list_text">Community</div></div></li>
+                    <li><button class="list_element"><img class="list_img" src="./images/house_gray.svg" alt="netu"><div class="list_text">Live Stream</div></button></li>
+                    <li><button class="list_element"><img class="list_img" src="./images/arrow.svg" alt="netu"><div class="list_text">Tutorial</div></button></li>
+                    <li><button class="list_element"><img class="list_img" src="./images/stream.svg" alt="netu"><div class="list_text">Competition</div></button></li>
+                    <li><button class="list_element"><img class="list_img" src="./images/playlist.svg" alt="netu"><div class="list_text">Community</div></button></li>
                 </ul>
             </div>
             
@@ -54,17 +54,24 @@
                 <label class="switch">
                     <input type="checkbox">
                     <span class="slider round"></span>
+                    <p class="slider_text">Night mode</p>
                 </label>
-                <p class="slider__text">Night mode</p>
             </div>
         </div>
         
         <div class="header">
             <div class="header__search">
-                <form>
-                    <input type="text" placeholder="Search">
-                    <button type="submit"></button>
-                  </form>
+                <form class="header_form">
+                    <input class="search" type="text" placeholder="Search">
+                    <button class="search_button" type="submit"></button>
+                </form>
+            </div>
+
+            <div class="header__profile">
+                <img src="./images/header_avatar.svg" alt="netu">
+                <p class="profile_text">Thomas</p>
+                <button class="profile_button"><img src="./images/profile_arrow.svg" alt="netu"></button>
+                <button class="profile_button"><img class="profile_notification" src="./images/notification.svg" alt="netu"></button>
             </div>
         </div>
     </div>
