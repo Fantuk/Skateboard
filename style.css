@@ -23,6 +23,9 @@ body
   --clr6: #FF7551;
   --clr7: #6C5ECF;
   --clr8: grey;
+  --clr9: #24273081;
+  --clr10: #242730;
+  --clr11: #B7B9D2;
 }
 
 .page
@@ -47,7 +50,7 @@ body
   color: var(--clr3);
   font-size: 1.25rem;
   padding-top: 2.5em;
-  margin-bottom: 2.5em;
+  padding-bottom: 2.5em;
 }
 
 .menu
@@ -184,12 +187,20 @@ body
     margin-left: 4em;
     white-space: nowrap;
     color: var(--clr2);
+    cursor: pointer;
+  }
+  .header_row
+  {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 7em;
   }
 
   .header
   {
     display: flex;
     margin: 1.3em;
+    margin-bottom: 0;
     margin-left: 0;
     justify-content: space-between;
     align-items: flex-end;
@@ -260,4 +271,251 @@ body
     background: none;
     border: 0;
     cursor: pointer;
+  }
+
+  .content_wrapper
+  {
+    grid-template-rows: auto 1fr 1fr;
+  }
+
+  .content
+  {
+    position: absolute;
+    left: 15.7em;
+    top: 7em;
+  }
+  
+  .discover{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .discover__title
+  {
+    font-size: 2.5rem;
+    color: var(--clr3);
+  }
+
+  .card_1
+  {
+    grid-column: 1;
+    display: block;
+    position: relative;
+    color: var(--clr3);
+    width: 725px;
+    height: 364px;
+    border-radius: 20px;
+  }
+  
+  .card1_image
+  {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .avatar_content
+  {
+    position: absolute;
+    top: 2.5em;
+    left: 2em;
+  }
+
+  .card_text
+  {
+    font-size: 2rem;
+    width: 7.5em;
+    line-height: 120%;
+    padding-bottom: 0.5em;
+  }
+
+  .avatar_icon
+  {
+    padding-right: 0.4em;
+  }
+
+  .avatar_profile
+  {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile_info
+  {
+    opacity: 0.8;
+    font-size: 0.8rem;
+  }
+
+  .duration
+  {
+    position: absolute;
+    background-color: var(--clr9);
+    width: 3em;
+    bottom: 1em;
+    right: 1em;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .duration__text
+  {
+    font-size: 0.7rem;
+    line-height: auto;
+  }
+
+  .card_2{
+    grid-column: 2;
+    display: block;
+    position: relative;
+    color: var(--clr3);
+    width: 350px;
+    height: 364px;
+    border-radius: 20px;
+  }
+
+  .card2_image
+  {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .text_mod
+  {
+    font-size: 1.5rem;
+    padding-bottom: 0.4em;
+  }
+
+  .profile_mod
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .icon_mod
+  {
+    padding-top: 1.5em;
+  }
+
+  .mostWatched
+  {
+    display: grid;
+    grid-template-columns: 260px 260px 260px 260px;
+    gap: 17px;
+  }
+
+  .mostWatched__title
+  {
+    font-size: 1.75rem;
+    color: var(--clr3);
+    padding-top: 1em;
+  }
+
+  .mw_card_1
+  {
+    display: block;
+    position: relative;
+    grid-column: 1;
+    width: 260px;
+    height: 285px;
+    background-color: var(--clr10);
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+
+  .mw_card_2
+  {
+    display: block;
+    position: relative;
+    grid-column: 2;
+    width: 260px;
+    height: 285px;
+    background-color: var(--clr10);
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+
+  .mw_card_3
+  {
+    display: block;
+    position: relative;
+    grid-column: 3;
+    width: 260px;
+    height: 285px;
+    background-color: var(--clr10);
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+
+  .mw_card_4
+  {
+    display: block;
+    position: relative;
+    grid-column: 4;
+    width: 260px;
+    height: 285px;
+    background-color: var(--clr10);
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+
+  .mw_card_img
+  {
+    display: block;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .mw_card_content
+  {
+    position: absolute;
+    font-size: 1rem;
+    top: 11em;
+    left: 1em;
+  }
+
+  .mw_card_nickname
+  {
+    font-size: 0.75rem;
+    color: var(--clr11);
+    padding-bottom: 0.25em;
+  }
+
+  .dot
+  {
+    position: absolute;
+    width: 1px;
+    top: 0.4em;
+    left: 5.3em;
+    height: 1px;
+    border: 3px solid green;
+    border-radius: 100%;
+  }
+
+  .video_name
+  {
+    font-size: 1rem;
+    color: var(--clr3);
+    padding-bottom: 0.25em;
+  }
+
+  .mw_card_viewer
+  {
+    font-size: 0.75rem;
+    color: var(--clr2);
+  }
+
+  .duration_mod
+  {
+    color: var(--clr3);
+    top: 1em;
+    right: 1em;
+    height: 1em;
+  }
+
+  .mw_card_icon
+  {
+    position: absolute;
+    top: -2.8em;
+    right: 1.5em;
   }
