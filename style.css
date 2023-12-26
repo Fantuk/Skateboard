@@ -41,15 +41,18 @@ body
 
 .page
 {
-  margin-inline: auto;
+
   display: grid;
-  grid-template-columns: 15.5em 5fr;
+  width: 100%;
+  max-width: 1400px;
+  grid-template-columns: 230px 5fr;
 }
 
 .sidebar
 {
+  position: fixed;
   grid-column-start: 1;
-  width: 148px;
+  width: 150px;
   height: 100vh;
   margin: 1.3em;
   margin-top: 0;
@@ -200,22 +203,18 @@ body
     color: var(--clr2);
     cursor: pointer;
   }
-  .header_row
-  {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    height: 7em;
-  }
+
 
   .header
   {
+    grid-column-start: 2;
     display: flex;
-    margin: 1.3em;
-    margin-bottom: 0;
-    margin-left: 0;
-    align-items: flex-end;
     justify-content: space-between;
-    height: 4em;
+    width: 100%;
+    margin-top: 4em;
+    align-items: center;
+    height: 2em;
+    padding-bottom: 40px;
   }
 
   .sidebar_hide
@@ -223,12 +222,14 @@ body
     display: none;
   }
 
-  form {
+  .header_form {
     display: flex;
-    justify-content: center;
     position: relative;
-    width: 40.5em;
+    justify-content: center;
+    width: 100%;
+    max-width: 625px;
     margin: 0;
+
   }
   .search, .search_button{
     border: none;
@@ -247,7 +248,7 @@ body
     width: 26px;
     position: absolute;
     top: 0.2em;
-    right: 8px;
+    right: 20px;
     background: var(--clr4);
     cursor: pointer;
   }
@@ -259,14 +260,11 @@ body
     font-weight: bold;
   }
 
-  .header_form
-  {
-    justify-content: flex-start;
-  }
 
   .header__search
   {
-    justify-content: flex-start;
+    width: 100%;
+    max-width: 625px;
   }
 
   .header__profile
@@ -298,14 +296,16 @@ body
 
   .content
   {
-    position: absolute;
+    width: 100%;
+    grid-column-start: 2;
     left: 15.7em;
     top: 7em;
   }
   
   .discover{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 725px 350px;
+    height: 364px;
     gap: 20px;
   }
 
@@ -317,12 +317,12 @@ body
 
   .card_1
   {
-    grid-column: 1;
+    grid-column-start: 1;
     display: block;
     position: relative;
     color: var(--clr3);
-    width: 725px;
-    height: 364px;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
   }
   
@@ -389,8 +389,8 @@ body
     display: block;
     position: relative;
     color: var(--clr3);
-    width: 350px;
-    height: 364px;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
   }
 
@@ -422,6 +422,7 @@ body
     display: grid;
     grid-template-columns: 260px 260px 260px 260px;
     gap: 17px;
+    padding-top: 80px;
   }
 
   .mostWatched__title
@@ -436,7 +437,7 @@ body
     display: block;
     position: relative;
     grid-column: 1;
-    width: 260px;
+    width: 100%;
     height: 285px;
     background-color: var(--clr10);
     border-radius: 20px;
@@ -448,7 +449,7 @@ body
     display: block;
     position: relative;
     grid-column: 2;
-    width: 260px;
+    width: 100%;
     height: 285px;
     background-color: var(--clr10);
     border-radius: 20px;
@@ -460,7 +461,7 @@ body
     display: block;
     position: relative;
     grid-column: 3;
-    width: 260px;
+    width: 100%;
     height: 285px;
     background-color: var(--clr10);
     border-radius: 20px;
@@ -472,7 +473,7 @@ body
     display: block;
     position: relative;
     grid-column: 4;
-    width: 260px;
+    width: 100%;
     height: 285px;
     background-color: var(--clr10);
     border-radius: 20px;
@@ -542,85 +543,26 @@ body
     top: -2.8em;
     right: 1.5em;
   }
-
-  @media screen and (min-width: 2000px) 
+/* 
+  @media screen and (max-width: 1350px) 
   {
-    .content
-    {
-      left: 30%;
-    }
-    
-    form
-    {
-      left: 80%;
-    }
-  }
-  
-  @media screen and (max-width: 800px) 
-  {
-    .sidebar
-    {
-      display: none;
-    }
+      .discover
+      {
+        grid-template-columns: 725px;
+      }
 
-    .sidebar_hide
-    {
-      display: block;
-    } 
+      .card2_image
+      {
+        width: 100%;
+        aspect-ratio: 2/1;
+        object-fit: cover;
+        border-radius: 20px;
+      }
 
-    .content
-    {
-      margin-left: -15em;   
-    }
+      .card_2
+      {
+        grid-column-start: 1;
 
-    .discover
-    {
-      grid-template-columns: 1fr;
-    }
-
-    form
-    {
-      width: 30em;
-    }
-
-    .card_1
-    {
-      width: 700px;
-    }
-
-    .card_2
-    {
-      grid-column: 1;
-      display: block;
-      position: relative;
-      color: var(--clr3);
-      width: 700px;
-      height: 364px;
-      border-radius: 20px;
-    }
-
-    .card2_image
-    {
-      width: 100%;
-      aspect-ratio: 2/1;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-
-    .mostWatched
-    {
-      grid-template-columns: 1fr 1fr;
-
-    }
-
-    .mw_card_3
-    {
-      grid-column-start: 1;
-    }
-    
-    .mw_card_4
-    {
-      grid-column-start: 2;
-    }
-  }
+      }
+  } */
 
